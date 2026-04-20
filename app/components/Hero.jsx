@@ -4,10 +4,10 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <section className='py-24'>
+    <section className='py-24 overflow-x-clip'>
        <div className='container relative'>
 
-      <div className='absolute -left-20 top-16'>
+      <div className='absolute -left-15 top-16'>
         <Image
           className=""
           src="/assets/images/design-example-1.png"
@@ -16,7 +16,7 @@ export default function Hero() {
           height={300}
         />
       </div>
-      <div className='absolute -right-25 -top-16'>
+      <div className='absolute -right-15 -top-16'>
         <Image
           className=""
           src="/assets/images/design-example-2.png"
@@ -33,7 +33,7 @@ export default function Hero() {
           </div>
       </div>
 
-      <h1 className='text-6xl md:text-7xl font-medium text-center mt-6 mx-auto max-w-4xl text-white'>
+      <h1 className='text-6xl md:text-7xl lg:text-8xl font-medium text-center mt-6 mx-auto max-w-4xl text-white'>
         Impactfull design, create effortless experiences
         </h1>
       <p className='text-center text-xl text-white/50 mt-8 max-w-2xl mx-auto'>Discover the latest news and insights on environmental issues.
