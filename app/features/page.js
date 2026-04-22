@@ -1,10 +1,42 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import { integrations } from '../../lib/integration'
+import Image from 'next/image'
+
 export default function FeaturesPage() {
+
   return (
-    <div className='mt-15'>
+
+    <div className='container mx-auto py-2'>
+
       <Navbar />
-      FeaturesPage
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10'>
+
+        <ul className=''>
+          {
+            integrations.map((integration) => (
+              <li 
+              key={integration.id}
+              className='grid grid-cols-1  gap-4 items-center justify-center text-center py-2 border mb-3 rounded-md'>
+                <Image
+                  className='align-middle mx-auto'
+                  src={integration.icon}
+                  alt={integration.title}
+                  width={50}
+                  height={50}
+                />
+                <h1>{integration.title}</h1>
+                <p>{integration.description}</p>
+              </li>
+            ))
+          }
+        </ul>
+
+
+      </div>
+      <Footer />
+
     </div>
   )
 }
